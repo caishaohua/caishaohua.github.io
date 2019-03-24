@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Operator on 阳明的博客</title>
+    <link>https://caishaohua.github.io/tags/operator/</link>
+    <description>Recent content in Operator on 阳明的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://caishaohua.github.io/tags/operator/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Prometheus Operator 高级配置</title>
+      <link>https://caishaohua.github.io/post/prometheus-operator-advance/</link>
+      <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://caishaohua.github.io/post/prometheus-operator-advance/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/M47g8E3BHzb6IhLiI1P5oA&#34;&gt;&lt;img src=&#34;https://ws4.sinaimg.cn/large/006tNbRwgy1fydddpxwfrj30p00anwgd.jpg&#34; alt=&#34;Prometheus Operator 高级配置&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://www.qikqiak.com/post/prometheus-operator-monitor-etcd&#34;&gt;上节课我们一起学习了如何在 Prometheus Operator 下面自定义一个监控选项&lt;/a&gt;，以及&lt;a href=&#34;https://www.qikqiak.com/post/prometheus-operator-custom-alert&#34;&gt;自定义报警规则&lt;/a&gt;的使用。那么我们还能够直接使用前面课程中的自动发现功能吗？如果在我们的 Kubernetes 集群中有了很多的 Service/Pod，那么我们都需要一个一个的去建立一个对应的 ServiceMonitor 对象来进行监控吗？这样岂不是又变得麻烦起来了？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Prometheus Operator 自定义报警</title>
+      <link>https://caishaohua.github.io/post/prometheus-operator-custom-alert/</link>
+      <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://caishaohua.github.io/post/prometheus-operator-custom-alert/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.qikqiak.com/post/prometheus-operator-monitor-etcd&#34;&gt;上篇文章我们介绍了如何自定义一个 ServiceMonitor 对象&lt;/a&gt;，但是如果需要自定义一个报警规则的话呢？又该怎么去做呢？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Prometheus Operator 监控 etcd 集群</title>
+      <link>https://caishaohua.github.io/post/prometheus-operator-monitor-etcd/</link>
+      <pubDate>Tue, 18 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://caishaohua.github.io/post/prometheus-operator-monitor-etcd/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://caishaohua.github.io/post/first-use-prometheus-operator/&#34;&gt;上节课和大家讲解了 Prometheus Operator 的安装和基本使用方法&lt;/a&gt;，这节课给大家介绍如何在 Prometheus Operator 中添加一个自定义的监控项。&lt;/p&gt;
+
+&lt;p&gt;除了 Kubernetes 集群中的一些资源对象、节点以及组件需要监控，有的时候我们可能还需要根据实际的业务需求去添加自定义的监控项，添加一个自定义监控的步骤也是非常简单的。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;第一步建立一个 ServiceMonitor 对象，用于 Prometheus 添加监控项&lt;/li&gt;
+&lt;li&gt;第二步为 ServiceMonitor 对象关联 metrics 数据接口的一个 Service 对象&lt;/li&gt;
+&lt;li&gt;第三步确保 Service 对象可以正确获取到 metrics 数据&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Prometheus Operator 初体验</title>
+      <link>https://caishaohua.github.io/post/first-use-prometheus-operator/</link>
+      <pubDate>Tue, 11 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://caishaohua.github.io/post/first-use-prometheus-operator/</guid>
+      <description>&lt;p&gt;前面的课程中我们学习了&lt;a href=&#34;https://www.qikqiak.com/k8s-book/docs/52.Prometheus%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html&#34;&gt;用自定义的方式来对 Kubernetes 集群进行监控&lt;/a&gt;，但是还是有一些缺陷，比如 Prometheus、AlertManager 这些组件服务本身的高可用，当然我们也完全可以用自定义的方式来实现这些需求，我们也知道 Prometheus 在代码上就已经对 Kubernetes 有了原生的支持，可以通过服务发现的形式来自动监控集群，因此我们可以使用另外一种更加高级的方式来部署 Prometheus：&lt;code&gt;Operator&lt;/code&gt; 框架。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

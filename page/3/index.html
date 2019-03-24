@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+
+  <title>阳明的博客-www.qikqiak.com|Kubernetes|Docker|Python|Golang|Cloud Native</title>
+  <meta name="keywords" content="Kubernetes,k8s,Docker,istio,Python,Django,Golang,Hugo,Cloud Native,微服务"/>
+  <meta name="description" content="关注容器、kubernetes、istio、devops、python、django、golang、微服务等技术。">
+  <meta property="og:title" content="阳明的博客" />
+  <meta name="twitter:title" content="阳明的博客" />
+
+  <meta name="author" content=""/>
+  <link href='https://caishaohua.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://caishaohua.github.io/img/avatar.jpeg" />
+  <meta name="twitter:image" content="https://caishaohua.github.io/img/avatar.jpeg" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://caishaohua.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="阳明的博客" />
+
+  <meta name="generator" content="Hugo 0.51" />
+  <link rel="canonical" href="https://caishaohua.github.io/" />
+  <link rel="alternate" href="https://caishaohua.github.io/index.xml" type="application/rss+xml" title="阳明的博客">
+  <link rel="stylesheet" href="https://caishaohua.github.io/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://caishaohua.github.io/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://caishaohua.github.io/css/main.css?t=126" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://caishaohua.github.io/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://caishaohua.github.io/css/highlight.min.css" />
+  <link rel="stylesheet" href="https://caishaohua.github.io/css/prism.css?t=123" />
+  <link rel="stylesheet" href="https://caishaohua.github.io/css/search.css" />
+  
+  <link rel="stylesheet" href="https://caishaohua.github.io/css/reward.css" />
+  
+<meta name="google-site-verification" content="oKxX4fOvB2yYmU02txZFChM93XQbESU4JaG3tNH9Hm8" />
+<meta name="baidu-site-verification" content="F5ojAyqaKU" />
+<meta name="keywords" content="">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d611849735f187dd788dc054908f7d7a";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-69668147-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://caishaohua.github.io/">阳明的博客</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Home" href="https://caishaohua.github.io/">Home</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">Categories</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://caishaohua.github.io/page/archive/">Archive</a>
+                
+                  <a href="https://caishaohua.github.io/tags">tags</a>
+                
+                  <a href="https://caishaohua.github.io/tags/kubernetes">kubernetes</a>
+                
+                  <a href="https://caishaohua.github.io/tags/python">python</a>
+                
+                  <a href="https://caishaohua.github.io/tags/django">django</a>
+                
+                  <a href="https://caishaohua.github.io/tags/ops">devops</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">projects</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://youdianzhishi.com/?utm_source=blog&amp;utm_campaign=referral&amp;utm_medium=topmenu">优点知识</a>
+                
+                  <a href="https://caishaohua.github.io/k8s-book/">k8s进阶手册</a>
+                
+                  <a href="https://caishaohua.github.io/istio-book/">我们一起学istio</a>
+                
+                  <a href="https://caishaohua.github.io/tdd-book/">Python微服务实战</a>
+                
+                  <a href="https://md.qikqiak.com/">Markdown转微信</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="https://caishaohua.github.io/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+
+        
+          <li>
+            <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
+              <span id="searchGlyph" class="glyphicon glyphicon-search"></span>
+            </a>
+          </li>
+          
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+
+  <div id="modalSearch" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">搜索</h4>
+        </div>
+        <div class="modal-body">
+            
+<div class="aa-input-container" id="aa-input-container">
+    <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search for titles or URIs..." name="search" autocomplete="off" />
+    <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
+        <path d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z" />
+    </svg>
+</div>
+<script src="https://caishaohua.github.io/js/algoliasearch.min.js"></script>
+<script src="https://caishaohua.github.io/js/autocomplete.min.js"></script>
+
+<script>
+var client = algoliasearch("1JDRAS0AZR", "8804ac109158bb3bb60d74ce98fa332f");
+var index = client.initIndex('prod_blog');
+
+autocomplete('#aa-search-input',
+{ hint: false}, {
+    source: autocomplete.sources.hits(index, {hitsPerPage: 5}),
+    
+    displayKey: 'name',
+    
+    templates: {
+        
+        suggestion: function(suggestion) {
+            return '<span>' + '<a href="https://caishaohua.github.io/post/' + suggestion.slug + '">' +
+            suggestion._highlightResult.title.value + '</a></span>';
+        }
+    }
+});
+</script>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+  
+  
+  
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=2 data-img-src-1="https://caishaohua.github.io/img/golang-k8s.png" data-img-src-2="https://caishaohua.github.io/img/hexagon.jpg" ></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="page-heading">
+                <h1>阳明的博客</h1>
+                  
+                    
+                      <hr class="small">
+                      <span class="page-subheading">关注容器、kubernetes、istio、devops、python、golang等~~~</span>
+                    
+                  
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="page-heading">
+              <h1>阳明的博客</h1>
+                
+                  
+                    <hr class="small">
+                    <span class="page-subheading">关注容器、kubernetes、istio、devops、python、golang等~~~</span>
+                  
+                
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10">
+
+        
+
+        <div class="row">
+          
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="thumbnail course-item">
+              <a href="https://youdianzhishi.com/?utm_source=blog&amp;utm_campaign=referral&amp;utm_medium=hero" title="优点知识"><span class="img" style="background-image: url(/img/ydzs.png)"></span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="thumbnail course-item">
+              <a href="https://caishaohua.github.io/k8s-book/" title="从 Docker 到 Kubernetes 进阶"><span class="img" style="background-image: url(/img/k8s-book.png)"></span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="thumbnail course-item">
+              <a href="https://caishaohua.github.io/tdd-book/" title="Python 微服务应用开发"><span class="img" style="background-image: url(https://ws2.sinaimg.cn/large/006tNc79gy1fz78f9vfjxj30p00dwjtr.jpg)"></span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="thumbnail course-item">
+              <a href="https://caishaohua.github.io/istio-book/" title="一起学istio"><span class="img" style="background-image: url(/img/istio-book-cover.png)"></span>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="posts-list">
+          
+          
+            
+            <article class="post-preview">
+              <a href="https://caishaohua.github.io/post/prometheus-operator-monitor-etcd/">
+                <h2 class="post-title">Prometheus Operator 监控 etcd 集群</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on December 18, 2018
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p><a href="https://caishaohua.github.io/post/first-use-prometheus-operator/">上节课和大家讲解了 Prometheus Operator 的安装和基本使用方法</a>，这节课给大家介绍如何在 Prometheus Operator 中添加一个自定义的监控项。</p>
+
+<p>除了 Kubernetes 集群中的一些资源对象、节点以及组件需要监控，有的时候我们可能还需要根据实际的业务需求去添加自定义的监控项，添加一个自定义监控的步骤也是非常简单的。</p>
+
+<ul>
+<li>第一步建立一个 ServiceMonitor 对象，用于 Prometheus 添加监控项</li>
+<li>第二步为 ServiceMonitor 对象关联 metrics 数据接口的一个 Service 对象</li>
+<li>第三步确保 Service 对象可以正确获取到 metrics 数据</li>
+</ul>
+                  <a href="https://caishaohua.github.io/post/prometheus-operator-monitor-etcd/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="https://caishaohua.github.io/tags/kubernetes/">kubernetes</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/prometheus/">prometheus</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/operator/">operator</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/etcd/">etcd</a>&nbsp;
+                
+                </span>
+              
+            </article>
+          
+            
+            <article class="post-preview">
+              <a href="https://caishaohua.github.io/post/grafana-log-tool-loki/">
+                <h2 class="post-title">Grafana 日志聚合工具 Loki</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on December 14, 2018
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p><img src="https://caishaohua.github.io/img/posts/grafana-loki-cover.png" alt="" />
+<code>Loki</code>是 Grafana Labs 团队最新的开源项目，是一个水平可扩展，高可用性，多租户的日志聚合系统。它的设计非常经济高效且易于操作，因为它不会为日志内容编制索引，而是为每个日志流编制一组标签。项目受 Prometheus 启发，官方的介绍就是：<code>Like Prometheus, but for logs.</code>，类似于 Prometheus 的日志系统。</p>
+                  <a href="https://caishaohua.github.io/post/grafana-log-tool-loki/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="https://caishaohua.github.io/tags/kubernetes/">kubernetes</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/prometheus/">prometheus</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/grafana/">grafana</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/loki/">loki</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/%E6%97%A5%E5%BF%97/">日志</a>&nbsp;
+                
+                </span>
+              
+            </article>
+          
+            
+            <article class="post-preview">
+              <a href="https://caishaohua.github.io/post/first-use-prometheus-operator/">
+                <h2 class="post-title">Prometheus Operator 初体验</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on December 11, 2018
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p>前面的课程中我们学习了<a href="https://www.qikqiak.com/k8s-book/docs/52.Prometheus%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html">用自定义的方式来对 Kubernetes 集群进行监控</a>，但是还是有一些缺陷，比如 Prometheus、AlertManager 这些组件服务本身的高可用，当然我们也完全可以用自定义的方式来实现这些需求，我们也知道 Prometheus 在代码上就已经对 Kubernetes 有了原生的支持，可以通过服务发现的形式来自动监控集群，因此我们可以使用另外一种更加高级的方式来部署 Prometheus：<code>Operator</code> 框架。</p>
+                  <a href="https://caishaohua.github.io/post/first-use-prometheus-operator/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="https://caishaohua.github.io/tags/kubernetes/">kubernetes</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/prometheus/">prometheus</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/operator/">operator</a>&nbsp;
+                
+                </span>
+              
+            </article>
+          
+            
+            <article class="post-preview">
+              <a href="https://caishaohua.github.io/post/docker-image-explore-tool-dive/">
+                <h2 class="post-title">Docker 镜像分析工具 Dive(附视频)</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on December 8, 2018
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p>我们知道用<code>docker inspect</code>命令可以查看一个 docker 镜像的 meta 信息，用<code>docker history</code>命令可以了解一个镜像的构建历史，但是这些信息对我们去分析一个镜像的具体一层的组成来说还是不太够，不够清晰明了。</p>
+                  <a href="https://caishaohua.github.io/post/docker-image-explore-tool-dive/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="https://caishaohua.github.io/tags/docker/">docker</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/%E9%95%9C%E5%83%8F/">镜像</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/dive/">dive</a>&nbsp;
+                
+                </span>
+              
+            </article>
+          
+            
+            <article class="post-preview">
+              <a href="https://caishaohua.github.io/post/k8s-api-resources-group-and-version/">
+                <h2 class="post-title">Kubernetes API 资源使用</h2>
+                
+                  <h3 class="post-subtitle">
+                  应该使用哪个 Group 和 Version?
+                  </h3>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on December 7, 2018
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p><code>Kubernetes</code>使用声明式的 API 让系统更加健壮。但是这样也就意味着我们想要系统执行某些操作就需要通过使用<code>CLI</code>或者<code>REST API</code>来创建一个资源对象，为此，我们需要定义 API 资源的名称、组和版本等信息。但是很多用户就会为此感到困惑了，因为有太多的资源、太多的版本、太多的组了，这些都非常容易产生混淆。如果我们通过 YAML 文件定义过 Deployment 这样的资源清单文件的话，那么你应该会看到<code>apiVersion: apps/v1beta2</code>、<code>apiVersion: apps/v1</code>等等这样的信息，那么我们到底应该使用哪一个呢？哪一个才是正确的呢？如何检查<code>Kubernetes</code>集群支持哪些？其实我们使用<code>kubectl</code>工具就可以来解决我们的这些疑惑。</p>
+                  <a href="https://caishaohua.github.io/post/k8s-api-resources-group-and-version/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="https://caishaohua.github.io/tags/kubernetes/">kubernetes</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/api/">api</a>&nbsp;
+                
+                </span>
+              
+            </article>
+          
+            
+            <article class="post-preview">
+              <a href="https://caishaohua.github.io/post/automatic-kubernetes-ingress-https-with-lets-encrypt/">
+                <h2 class="post-title">Kubernetes Ingress 自动化 HTTPS</h2>
+                
+                  <h3 class="post-subtitle">
+                  使用 Let&#39;s Encrypt 实现 Kubernetes Ingress 自动化 HTTPS
+                  </h3>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on December 5, 2018
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p>我们知道<code>HTTPS</code>的服务非常安全，Google 现在对非<code>HTTPS</code>的服务默认是拒绝的，而且还能避免国内各种乱七八糟的劫持，所以启用<code>HTTPS</code>服务是真的非常有必要的。一些正规机构颁发的<code>CA</code>证书费用又特别高，不过比较幸运的是也有免费的午餐 - <code>Let's Encrypt</code>，虽然只有90天的证书有效期，但是我们完全可以在证书失效之前，重新生成证书替换掉。在<code>Kubernetes</code>集群中就更方便了，我们可以通过 Kubernetes Ingress 和 Let&rsquo;s Encrypt 实现外部服务的自动化 HTTPS。</p>
+                  <a href="https://caishaohua.github.io/post/automatic-kubernetes-ingress-https-with-lets-encrypt/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="https://caishaohua.github.io/tags/kubernetes/">kubernetes</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/ingress/">ingress</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/traefik/">traefik</a>&nbsp;
+                
+                </span>
+              
+            </article>
+          
+            
+            <article class="post-preview">
+              <a href="https://caishaohua.github.io/post/kubernetes-dashboard-wayne-usage/">
+                <h2 class="post-title">360 开源 K8S Dashboard Wayne 的安装使用</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on November 19, 2018
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p><code>Kubernetes</code> 官方本身就提供了一个管理集群的 Dashboard 插件，但是官方的 Dashboard 插件还是有一些局限性，近日360开源了内部使用的 Kubernetes Dashboard 插件：<a href="https://github.com/Qihoo360/wayne/">Wayne</a>。 <code>Wayne</code> 是一个通用的、基于 Web 的 Kubernetes 多集群管理平台。通过可视化 Kubernetes 对象模板编辑的方式，降低业务接入成本， 拥有完整的权限管理系统，适应多租户场景，是一款适合企业级集群使用的发布平台。</p>
+                  <a href="https://caishaohua.github.io/post/kubernetes-dashboard-wayne-usage/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="https://caishaohua.github.io/tags/kubernetes/">kubernetes</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/wayne/">wayne</a>&nbsp;
+                
+                </span>
+              
+            </article>
+          
+            
+            <article class="post-preview">
+              <a href="https://caishaohua.github.io/post/grafana-usage-in-k8s/">
+                <h2 class="post-title">Grafana 在 Kubernetes 中的使用</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on November 17, 2018
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p><a href="https://mp.weixin.qq.com/s/ir3shARUPqjyBtDWcuzutQ"><img src="https://caishaohua.github.io/img/posts/grafana-cover.png" alt="grafana in k8s " /></a>
+<a href="https://www.qikqiak.com/k8s-book/docs/55.%E7%9B%91%E6%8E%A7Kubernetes%E5%B8%B8%E7%94%A8%E8%B5%84%E6%BA%90%E5%AF%B9%E8%B1%A1.html">前面的课程中我们使用 Prometheus 采集了 Kubernetes 集群中的一些监控数据指标</a>，我们也尝试使用<code>promQL</code>语句查询出了一些数据，并且在 Prometheus 的 Dashboard 中进行了展示，但是明显可以感觉到 Prometheus 的图表功能相对较弱，所以一般情况下我们会一个第三方的工具来展示这些数据，今天我们要和大家使用到的就是<code>grafana</code>。</p>
+                  <a href="https://caishaohua.github.io/post/grafana-usage-in-k8s/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="https://caishaohua.github.io/tags/kubernetes/">kubernetes</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/prometheus/">prometheus</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/grafana/">grafana</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/alertmanger/">AlertManger</a>&nbsp;
+                
+                </span>
+              
+            </article>
+          
+            
+            <article class="post-preview">
+              <a href="https://caishaohua.github.io/post/course-11-promotion/">
+                <h2 class="post-title">双11优点知识课程优惠活动</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on November 8, 2018
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p><a href="https://mp.weixin.qq.com/s/EaZGQ5bL_6wuSz6aSXyRTg"><img src="https://caishaohua.github.io/img/posts/course-11-promotion.png" alt="k8s course" /></a></p>
+
+<p>双11马上就要到了，我特别想买优点知识上面的几门课程，阳明老师难道都不给点优惠吗？啊？双11就真的要给优惠吗？当然啊，多多少少安慰下单身🐶受伤的心灵噻，我：&hellip;&hellip;</p>
+                  <a href="https://caishaohua.github.io/post/course-11-promotion/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="https://caishaohua.github.io/tags/kubernetes/">kubernetes</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/%E8%AF%BE%E7%A8%8B/">课程</a>&nbsp;
+                
+                </span>
+              
+            </article>
+          
+            
+            <article class="post-preview">
+              <a href="https://caishaohua.github.io/post/promethues-monitor-k8s-nodes/">
+                <h2 class="post-title">监控 Kubernetes 集群节点</h2>
+                
+                  <h3 class="post-subtitle">
+                  使用 Prometheus 监控 Kubernetes 集群节点
+                  </h3>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on November 5, 2018
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p><a href="https://mp.weixin.qq.com/s/JAOW9Zc8FSPk4xtIXVruag"><img src="https://caishaohua.github.io/img/posts/promethus-k8s-node-cover.png" alt="prometheus monitor k8s node" /></a>
+<a href="https://www.qikqiak.com/post/promethues-monitor-k8s-app/">上节课我们和大家学习了怎样用 Promethues 来监控 Kubernetes 集群中的应用</a>，但是对于 Kubernetes 集群本身的监控也是非常重要的，我们需要时时刻刻了解集群的运行状态。</p>
+
+<p>对于集群的监控一般我们需要考虑以下几个方面：</p>
+
+<ul>
+<li>Kubernetes 节点的监控：比如节点的 cpu、load、disk、memory 等指标</li>
+<li>内部系统组件的状态：比如 kube-scheduler、kube-controller-manager、kubedns/coredns 等组件的详细运行状态</li>
+<li>编排级的 metrics：比如 Deployment 的状态、资源请求、调度和 API 延迟等数据指标</li>
+</ul>
+                  <a href="https://caishaohua.github.io/post/promethues-monitor-k8s-nodes/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="https://caishaohua.github.io/tags/prometheus/">prometheus</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/monitor/">monitor</a>&nbsp;
+                
+                  #<a href="https://caishaohua.github.io/tags/kubernetes/">kubernetes</a>&nbsp;
+                
+                </span>
+              
+            </article>
+          
+        </div>
+
+        <div align="center" class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+
+<ul class="pagination">
+    
+    <li class="page-item">
+        <a href="https://caishaohua.github.io/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+    <a href="https://caishaohua.github.io/page/2/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="https://caishaohua.github.io/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="https://caishaohua.github.io/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item active"><a class="page-link" href="https://caishaohua.github.io/page/3/">3</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="https://caishaohua.github.io/page/4/">4</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item disabled"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="https://caishaohua.github.io/page/11/">11</a></li>
+    
+    
+    <li class="page-item">
+    <a href="https://caishaohua.github.io/page/4/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+        <a href="https://caishaohua.github.io/page/11/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </div>
+
+      </div>
+
+      <div class="col-lg-4 col-md-2">
+        <div class="sidebar-wrap sidebar-about">
+          <div class="about-img">
+            <img src="https://www.qikqiak.com/img/avatar.jpg" class="rounded-circle">
+          </div>
+          <h4 class="py-2">Hi! -That's Me</h4>
+          <p class="about-text">大家好，我叫阳明(杨川胡)，之前是小米公司的一名高级开发工程师，现在回到家乡成都，自由职业者一枚，是一个有着产品思维的工程师，现在也在努力将自己的产品思维体系化，对互联网产品有自己独到的见解，全栈工程师，现阶段对kubernetes和istio非常着迷，创建了「k8s技术圈」社区和「优点知识」知识付费网站。我可以提供企业kubernetes化方面的知识培训和咨询工作，感兴趣的可以通过微信iEverything和我联系。</p>
+          <ul class="list-inline social-link">
+            <li class="list-inline-item"><a href="mailto:icnych@gmail.com"><i class="fa fa-envelope"></i></a></li>
+            <li class="list-inline-item"><a href="https://github.com/cnych"><i class="fa fa-github"></i></a></li>
+            <li class="list-inline-item"><a href="https://weibo.com/cnych"><i class="fa fa-weibo"></i></a></li>
+            <li class="list-inline-item"><a href="https://caishaohua.github.io/index.xml"><i class="fa fa-rss"></i></a></li>
+            <li class="list-inline-item"><a href="https://instagram.com/cnych"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+          <img src="https://caishaohua.github.io/img/k8s-qrcode.jpg" alt="">
+        </div>
+        
+        <div class="sidebar-wrap">
+          <div class="sidebar-block course-wrap">
+            <h4 class="sidebar-title">视频课程</h4>
+            
+            <a class="course-post" href="https://youdianzhishi.com/course/6qw9y6/" title="Kubernetes 监控实战">
+              <img src="http://sdn.haimaxy.com/covers/2018/12/18/0c20de2508b141c6b5795050e3eecdf8.png" alt="Kubernetes 监控实战" class="img-fluid">
+            </a>
+            
+            <a class="course-post" href="https://youdianzhishi.com/course/6n8xd6/" title="从 Docker 到 Kubernetes 进阶">
+              <img src="http://sdn.haimaxy.com/covers/2018/9/14/0b8530ca670b477d813e3ad7e24165f3.png" alt="从 Docker 到 Kubernetes 进阶" class="img-fluid">
+            </a>
+            
+            <a class="course-post" href="https://youdianzhishi.com/course/m12jop/" title="Django2.x 实战项目">
+              <img src="http://sdn.haimaxy.com/covers/2018/9/14/1d46fb31106d4e729aa455f5163eb156.png" alt="Django2.x 实战项目" class="img-fluid">
+            </a>
+            
+            <a class="course-post" href="https://youdianzhishi.com/course/pjrqxm/" title="手动搭建高可用Kubernetes集群">
+              <img src="http://sdn.haimaxy.com/covers/2018/3/12/42a6c2f094804848ab5d550c239ca9d2.jpg" alt="手动搭建高可用Kubernetes集群" class="img-fluid">
+            </a>
+            
+          </div>
+        </div>
+        
+        <div class="sidebar-block">
+          <h4 class="sidebar-title">分类</h4>
+          <ol class="list-unstyled">
+            
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+            <li><a href="https://caishaohua.github.io/tags/django">django(9)</a></li>
+            
+          
+            
+          
+            
+          
+            
+            <li><a href="https://caishaohua.github.io/tags/docker">docker(14)</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+            <li><a href="https://caishaohua.github.io/tags/kubernetes">kubernetes(79)</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+            <li><a href="https://caishaohua.github.io/tags/prometheus">prometheus(13)</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+            <li><a href="https://caishaohua.github.io/tags/python">python(10)</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ol>
+        </div>
+        
+        <div class="sidebar-wrap">
+          <div class="sidebar-block latest-post">
+            <h4 class="sidebar-title">热门文章</h4>
+            <ol class="list-unstyled">
+              
+              <li>
+                <a href="https://caishaohua.github.io/post/how-to-learn-kubernetes/">
+                  <div class="rpost-img">
+                    <img src="https://caishaohua.github.io/img/posts/photo-1535383494412-9bdda0d6d9f3.jpeg" alt="如何学习 Kubernetes？" class="img-fluid">
+                  </div>
+                  <h5>如何学习 Kubernetes？</h5>
+                  <p class="text-muted">August 29, 2018</p>
+                </a>
+              </li>
+              
+              <li>
+                <a href="https://caishaohua.github.io/post/manual-install-high-available-kubernetes-cluster/">
+                  <div class="rpost-img">
+                    <img src="https://caishaohua.github.io/img/posts/WX20171110-105351.png" alt="手动搭建高可用的 Kubernetes 集群" class="img-fluid">
+                  </div>
+                  <h5>手动搭建高可用的 Kubernetes 集群</h5>
+                  <p class="text-muted">November 6, 2017</p>
+                </a>
+              </li>
+              
+              <li>
+                <a href="https://caishaohua.github.io/post/use-kubeadm-install-kubernetes-1.10/">
+                  <div class="rpost-img">
+                    <img src="https://caishaohua.github.io/img/posts/kubeadm-dashboard.png" alt="使用 kubeadm 搭建 kubernetes1.10 集群" class="img-fluid">
+                  </div>
+                  <h5>使用 kubeadm 搭建 kubernetes1.10 集群</h5>
+                  <p class="text-muted">April 14, 2018</p>
+                </a>
+              </li>
+              
+              <li>
+                <a href="https://caishaohua.github.io/post/huawei-cloudnativelives-k8s-course/">
+                  <div class="rpost-img">
+                    <img src="https://caishaohua.github.io/img/posts/cloudnativelives-video.png" alt="华为 CloudNativeLives Kubernetes 系列课程" class="img-fluid">
+                  </div>
+                  <h5>华为 CloudNativeLives Kubernetes 系列课程</h5>
+                  <p class="text-muted">August 31, 2018</p>
+                </a>
+              </li>
+              
+              <li>
+                <a href="https://caishaohua.github.io/post/dockerfile-best-practice/">
+                  <div class="rpost-img">
+                    <img src="https://caishaohua.github.io/img/posts/photo-1536620752150-a7e9e62a62ee.jpeg" alt="Dockerfile 最佳实践" class="img-fluid">
+                  </div>
+                  <h5>Dockerfile 最佳实践</h5>
+                  <p class="text-muted">September 12, 2018</p>
+                </a>
+              </li>
+              
+              <li>
+                <a href="https://caishaohua.github.io/post/kubernetes-jenkins1/">
+                  <div class="rpost-img">
+                    <img src="https://caishaohua.github.io/img/posts/k8s-jenkins-slave.png" alt="基于 kubernetes 的动态 jenkins slave" class="img-fluid">
+                  </div>
+                  <h5>基于 kubernetes 的动态 jenkins slave</h5>
+                  <p class="text-muted">July 28, 2018</p>
+                </a>
+              </li>
+              
+              <li>
+                <a href="https://caishaohua.github.io/post/kubernetes-jenkins2/">
+                  <div class="rpost-img">
+                    <img src="https://caishaohua.github.io/img/posts/pipeline-demo5.png" alt="Jenkins Pipeline 部署 Kubernetes 应用" class="img-fluid">
+                  </div>
+                  <h5>Jenkins Pipeline 部署 Kubernetes 应用</h5>
+                  <p class="text-muted">July 28, 2018</p>
+                </a>
+              </li>
+              
+              <li>
+                <a href="https://caishaohua.github.io/post/kubernetes-jenkins3/">
+                  <div class="rpost-img">
+                    <img src="https://caishaohua.github.io/img/posts/blue-demo7.png" alt="Jenkins Blue Ocean 的使用" class="img-fluid">
+                  </div>
+                  <h5>Jenkins Blue Ocean 的使用</h5>
+                  <p class="text-muted">August 2, 2018</p>
+                </a>
+              </li>
+              
+              <li>
+                <a href="https://caishaohua.github.io/post/prometheus-operator-advance/">
+                  <div class="rpost-img">
+                    <img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fyddjjj4prj315o0rswi5.jpg" alt="Prometheus Operator 高级配置" class="img-fluid">
+                  </div>
+                  <h5>Prometheus Operator 高级配置</h5>
+                  <p class="text-muted">December 20, 2018</p>
+                </a>
+              </li>
+              
+              <li>
+                <a href="https://caishaohua.github.io/post/automatic-kubernetes-ingress-https-with-lets-encrypt/">
+                  <div class="rpost-img">
+                    <img src="https://caishaohua.github.io/img/posts/traefik-dashboard-acme.png" alt="使用 Let&#39;s Encrypt 实现 Kubernetes Ingress 自动化 HTTPS" class="img-fluid">
+                  </div>
+                  <h5>使用 Let&#39;s Encrypt 实现 Kubernetes Ingress 自动化 HTTPS</h5>
+                  <p class="text-muted">December 5, 2018</p>
+                </a>
+              </li>
+              
+              <li>
+                <a href="https://caishaohua.github.io/post/python-virtualenv-all-know/">
+                  <div class="rpost-img">
+                    <img src="https://caishaohua.github.io/img/posts/django2-index.jpg" alt="Python 虚拟环境全知道" class="img-fluid">
+                  </div>
+                  <h5>Python 虚拟环境全知道</h5>
+                  <p class="text-muted">January 9, 2018</p>
+                </a>
+              </li>
+              
+              <li>
+                <a href="https://caishaohua.github.io/post/use-rbac-in-k8s/">
+                  <div class="rpost-img">
+                    <img src="https://caishaohua.github.io/img/posts/WX20180118-150156.png" alt="深入理解 Kubernetes RBAC 的用法" class="img-fluid">
+                  </div>
+                  <h5>深入理解 Kubernetes RBAC 的用法</h5>
+                  <p class="text-muted">June 22, 2018</p>
+                </a>
+              </li>
+              
+            </ol>
+          </div>
+        </div>
+        
+        <div class="sidebar-wrap">
+          <h4 class="sidebar-title">标签</h4>
+          <div class="list-unstyled tags-cloud">
+          
+            
+          
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/affinity">affinity(2)</a>
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/alertmanager">alertmanager(2)</a>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/cd">cd(3)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/ci">ci(5)</a>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/configmap">configmap(2)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/coredns">coredns(2)</a>
+            
+          
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/dashboard">dashboard(2)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/deployment">deployment(3)</a>
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/django">django(9)</a>
+            
+          
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/docker">docker(14)</a>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/elasticsearch">elasticsearch(4)</a>
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/flask">flask(2)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/fluentd">fluentd(2)</a>
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/github">github(3)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/gitlab">gitlab(4)</a>
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/golang">golang(2)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/grafana">grafana(4)</a>
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/harbor">harbor(3)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/helm">helm(6)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/https">https(3)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/hugo">hugo(2)</a>
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/ingress">ingress(3)</a>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/jenkins">jenkins(3)</a>
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/k8s">k8s(2)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/k8s%E6%8A%80%E6%9C%AF%E5%9C%88">k8s技术圈(3)</a>
+            
+          
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/kubeadm">kubeadm(2)</a>
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/kubernetes">kubernetes(79)</a>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/microservice">microservice(2)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/monitor">monitor(2)</a>
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/nfs">nfs(2)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/nginx">nginx(5)</a>
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/operator">operator(4)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/ops">ops(4)</a>
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/pipeline">pipeline(2)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/pod">pod(7)</a>
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/prometheus">prometheus(13)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/pv">pv(2)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/pvc">pvc(2)</a>
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/python">python(10)</a>
+            
+          
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/rbac">rbac(2)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/react">react(2)</a>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/slave">slave(2)</a>
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/storageclass">storageclass(3)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/tdd">tdd(2)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/traefik">traefik(3)</a>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/%E7%9F%A5%E8%AF%86%E6%98%9F%E7%90%83">知识星球(3)</a>
+            
+          
+            
+          
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/%E8%AF%BE%E7%A8%8B">课程(7)</a>
+            
+          
+            
+            <a href="https://caishaohua.github.io/tags/%E8%B0%83%E5%BA%A6">调度(3)</a>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </div>
+        </div>
+        
+        <div class="sidebar-block">
+          <h4 class="sidebar-title">友情链接</h4>
+          <ol class="list-unstyled">
+            
+            <li>
+              <a href="https://www.kube100.com?utm_source=qikqiak" target="__blank">K8S 技术圈</a>
+            </li>
+            
+            <li>
+              <a href="http://lijinxiu.com?utm_source=qikqiak" target="__blank">JACK LEE</a>
+            </li>
+            
+            <li>
+              <a href="https://jimmysong.io?utm_source=qikqiak" target="__blank">Jimmy Song</a>
+            </li>
+            
+            <li>
+              <a href="http://www.recall704.com?utm_source=qikqiak" target="__blank">RECALL&#39;s Blog</a>
+            </li>
+            
+            <li>
+              <a href="https://imroc.io?utm_source=qikqiak" target="__blank">Roc</a>
+            </li>
+            
+            <li>
+              <a href="https://www.yangcs.net?utm_source=qikqiak" target="__blank">Ryan Yang</a>
+            </li>
+            
+          </ol>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="popular-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="post-header border-bottom text-center">
+          <h3>不定期热门文章</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-sm-6">
+          <a class="popular-post" href="https://caishaohua.github.io/post/prometheus-operator-advance/">
+            <img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fydddpxwfrj30p00anwgd.jpg" alt="Prometheus Operator 高级配置" class="img-fluid">
+            <div class="post-content">
+              <p class="ptitle">Prometheus Operator 高级配置</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <a class="popular-post" href="https://caishaohua.github.io/post/kubernetes-affinity-scheduler/">
+            <img src="https://caishaohua.github.io/img/posts/affinity-schedule.png" alt="重新理解 kubernetes 亲和性调度" class="img-fluid">
+            <div class="post-content">
+              <p class="ptitle">重新理解 kubernetes 亲和性调度</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <a class="popular-post" href="https://caishaohua.github.io/post/grafana-usage-in-k8s/">
+            <img src="https://caishaohua.github.io/img/posts/grafana-cover.png" alt="Grafana 在 Kubernetes 中的使用" class="img-fluid">
+            <div class="post-content">
+              <p class="ptitle">Grafana 在 Kubernetes 中的使用</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <a class="popular-post" href="https://caishaohua.github.io/post/kube-scheduler-introduction/">
+            <img src="https://caishaohua.github.io/img/posts/kube-scheduler-cover.png" alt="Kubernetes 调度器介绍" class="img-fluid">
+            <div class="post-content">
+              <p class="ptitle">Kubernetes 调度器介绍</p>
+            </div>
+          </a>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          <img src="https://caishaohua.github.io/img/wechatmp.png">
+          
+              <li>
+                <a href="mailto:icnych@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+              <li>
+                <a href="https://github.com/cnych" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+              <li>
+                <a href="https://weibo.com/cnych" title="微博">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+              <li>
+                <a href="https://instagram.com/cnych" title="Instagram">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          
+          <li>
+            <a href="https://caishaohua.github.io/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;
+          2019
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://caishaohua.github.io/">阳明的博客</a>
+            &nbsp;&bull;&nbsp;
+            <a href="https://caishaohua.github.io/sitemap.xml">网站地图</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.51</a> powered &nbsp;&bull;&nbsp; Theme by <a href="https://github.com/rootsongjc/beautifulhugo">Beautiful Hugo</a> adapted to <a href="https://github.com/cnych/qikqiak-blog">qikqiak-blog</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://caishaohua.github.io/js/jquery-1.11.2.min.js"></script>
+<script src="https://caishaohua.github.io/js/bootstrap.min.js"></script>
+<script src="https://caishaohua.github.io/js/main.min.js"></script>
+<script src="https://caishaohua.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script src="https://caishaohua.github.io/js/prism.js?t=123"></script>
+
+<script src="https://caishaohua.github.io/js/reward.js"></script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-69668147-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-69668147-3');
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+  </body>
+</html>
+
